@@ -1,0 +1,178 @@
+/* Proyectos */
+.cont-proyect{
+    padding: 20px;
+
+    .cont-cardsProyect{
+        display: flex;
+        gap: 10px;
+
+        .cardProyect{
+            display: grid;
+            grid-template-columns: 40% 60%;
+            width: 40rem;
+            height: 18rem;
+            border-radius: 20px;
+            overflow: hidden;
+            background-image: url(../utilities/img/fondos/fondoCardProyectos.png);
+            margin-top: 25px;
+            box-shadow: 0px 6px 4px rgb(0, 0, 0);
+            transition: 0.3s ease, transform 0.3s ease;
+            border-left: 3px solid rgb(250, 204, 21);
+            border-right: 3px solid rgb(250, 204, 21);
+
+            // imagenes de los proyetos
+            .imgProyect{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 130px;
+                    height: 130px;
+                    background-color: $blanco;
+                    padding: 10px;
+                    transition: 0.6s ease-in-out;
+                    object-fit: cover;
+                    object-position: center;
+                    animation: proyectoBorde 8s ease-in-out infinite;
+                }
+            }
+
+            // animacion de los bordes de la imafen en cad de proyecto
+            @keyframes  proyectoBorde{
+                0% {
+                    border-radius: 20px 0px 0px 0px;
+                }
+                25% {
+                    border-radius: 0px 20px 0px 0px;
+                }
+                50% {
+                    border-radius: 0px 0px 20px 0px;
+                }
+                75% {
+                    border-radius: 0px 0px 0px 20px;
+                }
+                100% {
+                    border-radius: 20px 0px 0px 0px;
+                }
+            }
+
+            // informacion de las cards
+            .infoCardProyect{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                background: $violetaBajo;
+                box-shadow: inset 7px 7px 15px #0b001d, inset -7px -7px 15px #2d0275, -5px 0px 5px rgb(0, 0, 0);
+                border-radius: 20px;
+
+                .infoProyect{
+                    h3{
+                        font-family: $fuentePrincipal;
+                        font-weight: bold;
+                        background-color: $negro;
+                        width: max-content;
+                        padding: 10px;
+                        color: $blanco;
+                        border-radius: 10px;
+                    }
+
+                    p{
+                        font-family: $fuentePrincipal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: $blanco;
+                    }
+                }
+
+                .infoTecno{
+                    display: flex;
+                    gap: 5px;
+
+                    p{
+                        cursor: pointer;
+                        font-family: "Oxanium", sans-serif;
+                        font-weight: 600;
+                        font-size: 12px;
+                        color: $blanco;
+                        background-color: rgba(0, 0, 0, 0.568);
+                        padding: 7px;
+                        border-radius: 15px;
+                        text-shadow: 2px 2px 2px $negro;
+                        border-bottom: 3px solid $negro;
+                    }
+                }
+
+                .btnVerProyecto{
+                    font-family: $fuentePrincipal;
+                    font-weight: 600;
+                    color: $blanco;
+                    font-size: 14px;
+                    width: 8rem;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 8px 10px;
+                    background-color: $amarillo;
+                    border-radius: 10px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+                    display: inline-block;
+                    transition: transform 0.3s ease;
+
+                    .arrowBtnVer{
+                        display: inline-block;
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                // Efecto al pasar el mouse
+                .btnVerProyecto:hover {
+                    transform: translateY(5px);
+                }
+
+                .btnVerProyecto:hover .arrowBtnVer {
+                    transform: translate(3px, -3px);
+                }
+
+                .btnVerProyecto:active{
+                    transform: translateY(-1px) scale(0.98);
+                }
+
+                .circle1{
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    left: 75%;
+                    bottom: 5%;
+                    background-color: rgba(44, 28, 84, 0.199);
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+                }
+
+                .circle2{
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    left: 82%;
+                    bottom:15%;
+                    background-color: rgba(30, 45, 70, 0.247);
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+                }
+            }
+        }
+        .cardProyect:hover{
+            transform: translateY(-8px);
+            box-shadow: 0px 14px 4px $negro;
+        }
+        // animacion de imagen al pasar el cursor por la card de proyecto
+        .cardProyect:hover .imgProyect img{
+            transform: scale(1.4);
+            animation: none;
+            border-radius: 10px;
+        }
+    }
+}

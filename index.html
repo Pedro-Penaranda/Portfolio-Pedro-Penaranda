@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!--? font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <header id="start">
+        <!--? menu de navegación -->
+        <nav class="navBar" aria-label="Navegación principal">
+            <a class="logo" href="./index.html">Pedro Dev</a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="firstList" id="firstList">
+                <a class="linkList" href=""><li>Inicio</li></a>
+                <a class="linkList" href="#sobreMi"><li>Sobre mí</li></a>
+                <a class="linkList" href="#tecnologias"><li>Tecnologías</li></a>
+                <a class="linkList" href="#proyectos"><li>Proyectos</li></a>
+                <a class="btnContacto" href=""><li>Contacto</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--? Banner -->
+        <section class="banner">
+            <div class="cont-banner">
+                <h1 class="hero-etiqueta">DESARROLLADOR WEB</h1>
+
+                <span class="bannerTitulo">
+                    <span class="linea linea1">Construyo ideas que funcionan</span>
+                    <span class="linea linea2">en código.</span>
+                </span>
+
+                <p class="bannerDescripcion">Desarrollo sitios web modernos, funcionales y con un diseño que se adapta a tus necesidades.
+                </p>
+
+                <div class="bannerBotones">
+                    <a href="#proyectos" class="btnBanner btnProyecto">Ver proyectos →</a>
+                    <a href="#contacto" class="btnBanner btnContacto">Contactarme</a>
+                </div>
+            </div>
+            <div class="imgBanner">
+                <img src="./utilities/img/banner/pedro2.png" alt="Pedro">
+            </div>
+        </section>
+
+        <!--? Sobre mí -->
+        <div id="sobreMi"></div>
+        <div class="cont-sm">
+            <div class="cont-smRetratoTexto">
+                <div class="retratoCont">
+                    <img class="retrato" src="./utilities/img/iconos/retratoPedro.png" alt="Retrato">
+                    <div class="fig1">
+                        <div></div>
+                    </div>
+                    <div class="fig2">
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="txtSobreMi">
+                    <h2>Sobre mí</h2>
+                    <p>“Soy una persona curiosa y constantemente estoy buscando aprender algo nuevo. Me apasiona el desarrollo web porque me permite combinar lógica, creatividad y resolución de problemas. Mi objetivo es seguir creciendo como desarrollador mientras creo proyectos cada vez más completos y profesionales.”</p>
+                </div>
+            </div>
+
+            <!-- caja cmd -->
+            <div class="boxSm">
+                <div class="barBoxSm">
+                    <div class="barLeft">
+                        <div class="imgBoxSm">
+                            <img class="imgCmd" src="./utilities/img/iconos/icon-cmd.png" alt="cmd">
+                            <p>C:\Pedro\WD.</p>
+                            <img class="imgX" src="./utilities/img/iconos/icon-x.png" alt="X">
+                        </div>
+                        <img class="imgPlusCmd" src="./utilities/img/iconos/icon-plus.png" alt="agregar">
+                        <img class="imgDownCmd" src="./utilities/img/iconos/icon-down.png" alt="flecha hacia abajo">
+                    </div>
+                    
+                    <div class="barRight">
+                        <img class="imgCmdRight" src="./utilities/img/iconos/icon-minus.png" alt="menos">
+                        <img class="imgCmdRight" src="./utilities/img/iconos/icon-squad.png" alt="cuadrado">
+                        <img class="imgCmdRight imgX" src="./utilities/img/iconos/icon-x.png" alt="equis">
+                    </div>
+                </div>
+
+                <div class="txtBoxSm">
+                    <p>@[Versíon 4.8.1996]</p>
+                    <br>
+                    <p>C:\Users\user> name</p>
+                    <p>Host name: Pedro</p>
+                    <br>
+                    <p>C:\Users\user> role</p>
+                    <p>Host role: Web developer</p>
+                    <br>
+                    <p>C:\Users\user> skills</p>
+                    <p>Skill: HTML</p>
+                    <p>Skill: CSS</p>
+                    <p>Skill: JS</p>
+                    <p>Skill: SASS</p>
+                    <p>Skill: GIT</p>
+                    <p>Skill: BS</p>
+                    <br>
+                    <p>C:\Users\user> status</p>
+                    <p>status: building my path...</p>
+                    <p class="pg">Success</p>
+                    <br>
+                    <p class="pgSpa">C:\Users\Pedro></p>
+                </div>
+            </div>
+        </div>
+
+        <!--? Tecnologías -->
+        <div id="tecnologias"></div>
+        <div class="cont-tecno">
+            <h2>Tecnologias</h2>
+
+            <div class="cont-cardsTecno">
+                <div class="cardTecno html5">
+                    <img src="./utilities/img/iconos/icon-html5.png" alt="HTML5">
+                    <p>HTML5</p>
+                </div>
+
+                <div class="cardTecno css3">
+                    <img src="./utilities/img/iconos/icon-css3.png" alt="CSS3">
+                    <p>CSS3</p>
+                </div>
+
+                <div class="cardTecno js">
+                    <img src="./utilities/img/iconos/icons-js.png" alt="JS">
+                    <p>JS</p>
+                </div>
+
+                <div class="cardTecno sass">
+                    <img src="./utilities/img/iconos/icon-sass.png" alt="SASS">
+                    <p>SASS</p>
+                </div>
+
+                <div class="cardTecno git">
+                    <img src="./utilities/img/iconos/icon-git.png" alt="GIT">
+                    <p>GIT</p>
+                </div>
+
+                <div class="cardTecno bs">
+                    <img src="./utilities/img/iconos/icon-bootstrap.png" alt="BS">
+                    <p>BS5</p>
+                </div>
+            </div>
+        </div>
+
+        <!--? Proyectos -->
+        <div id="proyectos"></div>
+        <div class="cont-proyect">
+            <h2>Proyectos</h2>
+            <!-- contenedor de las cards de proyectos -->
+            <div class="cont-cardsProyect">    
+                <!-- Card de proyecto -->
+                <div class="cardProyect">
+                    <div class="imgProyect">
+                        <img class="img" src="./utilities/img/proyectos/logoEstudioJuridicoMoguilner.svg" alt="Estudio Jurídico">
+                    </div>
+                    <div class="infoCardProyect">
+                        <div class="infoProyect">
+                            <h3>Estudio Jurídico</h3>
+                            <br>
+                            <p>Diseño de una web moderna para un estudio jurídico, enfocada en transmitir confianza, seriedad y profesionalismo.</p>
+                        </div>
+                        <div class="infoTecno">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
+                        <a class="btnVerProyecto" href="https://estudiojuridicomoguilner.com.ar/index.html" target="_blank">Ver proyecto <span class="arrowBtnVer">↗</span></a>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                    </div>
+                </div>
+
+                <div class="cardProyect">
+                    <div class="imgProyect">
+                        <img class="imgimgimgimg" style="background-color: aliceblue;" src="./utilities/img/iconos/icon-down.png" alt="">
+                    </div>
+                    <div class="infoCardProyect">
+                        <div class="infoProyect">
+                            <h3>Proyecto In</h3>
+                            <br>
+                            <br>
+                            <p>Escirbir algo bonito para que quede bien y saber que esta buenardo</p>
+                        </div>
+                        <div class="infoTecno">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
+                        <a class="btnVerProyecto" href="">Ver proyecto <span class="arrowBtnVer">↗</span></a>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                    </div>
+                </div>
+
+                <div class="cardProyect">
+                    <div class="imgProyect">
+                        <img class="imgimgimgimg" style="background-color: aliceblue;" src="./utilities/img/iconos/icon-down.png" alt="">
+                    </div>
+                    <div class="infoCardProyect">
+                        <div class="infoProyect">
+                            <h3>Proyecto In</h3>
+                            <br>
+                            <br>
+                            <p>Escirbir algo bonito para que quede bien y saber que esta buenardo</p>
+                        </div>
+                        <div class="infoTecno">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
+                        <a class="btnVerProyecto" href="">Ver proyecto <span class="arrowBtnVer">↗</span></a>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="foo">
+        <div class="txtContacto">
+            <h2>Contacto</h2>
+            <p>¿Te gustaría <br> conectar conmigo?</p>
+        </div>
+
+        <a class="btnContact" href="#">
+            <img src="./utilities/img/iconos/icon-arrowContacto.png" alt="flecha">
+            <span>Contactarme</span>
+            <div></div>
+        </a>
+
+        <div class="cardsContact">
+            <div class="cardContact">
+                <img class="imgContact" src="./utilities/img/iconos/icon-email.png" alt="mail">
+                <h3>Email</h3>
+                <!-- <p>pedrogpenaranda@hotmail.com</p> -->
+                <div class="contactLink">
+                    <a href="#">
+                        <img src="./utilities/img/iconos/icon-arrow.png" alt="arrow right">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cardContact">
+                <img class="imgContact" src="./utilities/img/iconos/icon-github.png" alt="mail">
+                <h3>GitHub</h3>
+                <!-- <p>asdfg@hotmail.com</p> -->
+                <div class="contactLink">
+                    <a href="#"><img src="./utilities/img/iconos/icon-arrow.png" alt="arrow right"></a>
+                </div>
+            </div>
+
+            <div class="cardContact">
+                <img class="imgContact" src="./utilities/img/iconos/icon-linkedin.png" alt="mail">
+                <h3>Linkedin</h3>
+                <!-- <p>asdfg@hotmail.com</p> -->
+                <div class="contactLink">
+                    <a href="#"><img src="./utilities/img/iconos/icon-arrow.png" alt="arrow right"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./utilities/js/index.js"></script>
+</body>
+</html>
+

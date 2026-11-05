@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: $fondoPrimario;
+}
+
+h2{
+    color: $blanco;
+    margin-bottom: 15px;
+}
+h2::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 8px;
+        background:radial-gradient(ellipse 55px 8px at center,rgba(100, 100, 75, 0.226) 60%,rgba(248, 223, 2, 0.938) 5%) -120px 0 / 120px 100% no-repeat,
+        // linea
+        linear-gradient(90deg,rgb(17, 18, 19) 0%,rgb(254, 255, 255) 45%,rgb(147, 149, 153) 100%);
+        animation: brilloLinea 10s ease-in-out infinite;
+}

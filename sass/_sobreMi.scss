@@ -1,0 +1,177 @@
+/*? Sobre mi */
+.cont-sm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    .cont-smRetratoTexto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .retratoCont{
+            background: linear-gradient(135deg,rgb(224, 227, 230),rgb(48, 101, 192));
+            clip-path: polygon(
+                50px 0,
+                100% 0,
+                100% calc(100% - 50px),
+                calc(100% - 50px) 100%,
+                0 100%,
+                0 50px
+            );
+            box-shadow: 10px 10px 2px $negro;
+
+            .retrato{
+                width: 300px;
+            }
+        }
+
+        .txtSobreMi{
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            p, h2{
+                font-family: $fuentePrincipal;
+                color: $blanco;
+            }
+            h2::after{
+                content: "";
+                display: flex;
+                justify-content: center;
+                position: relative;
+                width: 100px;
+                height: 4px;
+                background: $amarillo;
+            }
+        }
+    }
+
+    /*? Caja cmd*/
+    // ? terminal cmd
+    .boxSm{
+        background-color: rgb(12, 12, 12);
+        border-radius: 10px;
+        border: 0.5px solid rgb(141, 139, 139);
+        overflow: hidden;
+        //! ver despues en revision con las MQ
+        max-width: 62rem;
+        min-width: 25rem;
+        height: auto;
+        box-shadow: 9px 9px 2px $negro;
+
+        .barBoxSm{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(54, 53, 53);
+            padding: 1px 1px 1px 18px;
+
+            // lado izquierdo de cmd
+            .barLeft{
+                display: flex;
+                align-items: center;
+
+                .imgBoxSm{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    background-color: rgb(12, 12, 12);
+                    border-radius: 8px 8px 4px 4px;
+                    padding: 6px;
+                    bottom: -6px;
+                    margin-right: 4px;
+                    .imgCmd{
+                        width: 20px;
+                        margin-right: 5px;
+                    }
+                    p{
+                        color: $blanco;
+                        font-family: monospace;
+                    }
+                    .imgX{
+                        width: 30px;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                    }
+                    .imgX:hover{
+                        background-color: rgb(68,70,68);
+                    }
+                }
+
+                /* botones de cmd agregar y desplegar */
+                .imgPlusCmd{
+                    width: 25px;
+                    padding: 5px;
+                    border-right: 1px solid $blanco;
+                }
+                .imgPlusCmd:hover{
+                    background-color: rgb(68,70,68);
+                    border-radius: 3px 0px 0px 3px;
+                }
+
+                .imgDownCmd{
+                    width: 25px;
+                    padding: 5px;
+                }
+                .imgDownCmd:hover{
+                    background-color: rgb(68,70,68);
+                    border-radius: 0px 3px 3px 0px;
+                }
+            }
+
+            /*? Botenes de menos, cuadrado y equis en cmd*/
+            // lado derecho de cmd
+            .barRight{
+                display: flex;
+                align-items: center;
+                
+                .imgCmdRight{
+                    width: 36px;
+                    padding: 10px;
+                }
+                .imgCmdRight:hover{
+                    background-color: rgb(68, 70, 68);
+                }
+
+                .imgX:hover{
+                    background-color: rgb(165, 42, 42);
+                }
+            }
+        }
+
+        /*? textos dentro del cmd */
+        .txtBoxSm{
+            padding: 8px;
+            color: $blanco;
+            font-family: monospace;
+            text-shadow: 2px 2px 1px rgb(68, 70, 68);
+
+            .pg{
+                color: rgb(3, 185, 3);
+            }
+
+            .pgSpa{
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+            .pgSpa::after{
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 14px;
+                background-color: rgb(3, 185, 3);
+                animation: parpadeo 1s steps(2, start) infinite;
+            }
+            // animacion de parapadeo en el cmd
+            @keyframes parpadeo {
+                to {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}

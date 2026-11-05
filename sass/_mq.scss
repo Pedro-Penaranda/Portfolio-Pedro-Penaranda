@@ -1,0 +1,191 @@
+@media (max-width: 1024px) {
+    .cont-sm{
+        flex-direction: column;
+
+        .boxSm{
+            width: 80%;
+            margin-top: 10px;
+        }
+    }
+
+    .cont-proyect{
+        .cont-cardsProyect{
+            .cardProyect{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                width: 20rem;
+                height: 30rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    //? Sobre mi
+    .cont-sm{
+        .cont-smRetratoTexto{
+            .retrato{
+                width: 250px;
+            }
+
+            .txtSobreMi{
+                padding: 15px;
+                gap: 10px;
+            }
+        }
+    }
+
+    //? Tecnologias
+    .cont-tecno{
+        .cont-cardsTecno{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+        }
+    }
+
+    //? Proyectos
+    .cont-proyect{
+        .cont-cardsProyect{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            .cardProyect{
+                height: 30rem;
+            }
+        }
+    }
+
+    //? Footer
+    .foo{
+        display: grid;
+        grid-template-areas: 'txtContact btnContact'
+                             'crsContact crsContact';
+        justify-items: center;
+        gap: 20px;
+
+        .txtContacto{
+            grid-area: txtContact;
+        }
+
+        .btnContact{
+            grid-area: btnContact;
+        }
+
+        .cardsContact{
+            grid-area: crsContact;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .banner{
+        min-height: 0px;
+        padding: 35px;
+        gap: 0px;
+        background: radial-gradient(ellipse 100% 85% at 85% 65%,rgba(37, 99, 235, 0.20), transparent 100%), linear-gradient(120deg,rgb(5, 10, 20),rgb(8, 16, 38));
+
+        .cont-banner{
+            h1{
+                width: 210px;
+            }
+
+            .bannerTitulo{
+                .linea{
+                    font-size: 24px;
+                }
+            }
+
+            .bannerDescripcion{
+                width: 180%;
+            }
+
+            .bannerBotones{
+                .btnBanner{
+                    padding: 14px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .imgBanner{
+            img{
+                width: 300px;
+                max-width: 500px;
+            }
+        }
+    }
+
+    //? Sobre mi
+    .cont-sm{
+        .cont-smRetratoTexto{
+            .retratoCont{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 300px;
+                box-shadow: -8px 10px 20px orange;
+    
+                .retrato{
+                    width: 150px;
+                }
+
+                .fig1{
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    width: 60%;
+                    height: 30px;
+                    top: 10px;
+                    right: 0px;
+                    background-color: $fondoPrimario;
+                    border-radius: 30px 0px 0px 30px;
+                    box-shadow: 3px 3px 5px $negro;
+
+                    div{
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid $amarillo;
+                        border-radius: 100%;
+                        margin-left: 5px;
+                    }
+                }
+
+                .fig2{
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    position: absolute;
+                    width: 60%;
+                    height: 30px;
+                    bottom: 10px;
+                    left: 0px;
+                    background-color: $fondoPrimario;
+                    border-radius: 0px 30px 30px 0px;
+                    box-shadow: -3px -3px 5px $negro;
+
+                    div{
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid $amarillo;
+                        border-radius: 100%;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    //? Proyectos
+    .cont-proyect{
+        .cont-cardsProyect{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+.foo{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .txtContacto{
+        h2::after{
+            content: "";
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100px;
+            height: 4px;
+            background: $amarillo;
+        }
+        
+        p{
+            font-family: $fuentePrincipal;
+            font-weight: 500;
+            color: $blanco;
+            margin-top: 20px;
+        }
+    }
+
+    .btnContact{
+        width: 160px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: $fondoSecundario;
+        padding: 10px;
+        height: 45px;
+        border: 1px solid $amarillo;
+        border-radius: 20px;
+        transition: 0.3s ease;
+
+        img{
+            width: 30px;
+            z-index: 1;
+        }
+
+        span{
+            font-family: $fuentePrincipal;
+            color: $blanco;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        div{
+            position: absolute;
+            width: 160px;
+            height: 45px;
+            background-color: $violetaBajo;
+            left: -160px;
+            z-index: 0;
+            transition: 0.3s ease;
+        }
+    }
+    .btnContact:hover{
+        transform: translateY(-3px);
+        border: 2px solid $amarillo;
+    }
+    .btnContact:hover img{
+        transform: translateX(5px);
+    }
+    .btnContact:hover div{
+        left: 0px;
+    }
+
+    .cardsContact{
+        display: flex;
+        gap: 15px;
+
+        .cardContact{
+            padding: 10px;
+            width: 7rem;
+            background-color: $fondoSecundario;   
+            border: 1px solid rgba(68, 70, 68, 0.514);
+            border-radius: 0px 50px 0px 50px;
+            box-shadow: 4px 4px 5px $negro; 
+            transition: 0.3s ease;
+
+            .imgContact{
+                border-radius: 5px;
+                background: rgb(10, 18, 32);
+                box-shadow:  4px 4px 8px rgb(9, 15, 27), -4px -4px 8px rgb(12, 21, 37);
+                transition: 0.4s ease;
+            }
+            .imgContact:hover{
+                transform: rotateY(360deg);
+            }
+
+            h3{
+                font-family: $fuentePrincipal;
+                color: $blanco;
+            }
+
+            p{
+                font-family: $fuentePrincipal;
+                color: $blanco;
+                font-size: 12px;
+            }
+
+            // link de las redes sociales
+            .contactLink{
+                display: flex;
+                justify-content: flex-end;
+
+                a{
+                    img{
+                        position: relative;
+                        width: 40px;
+                        animation: rebote 2s ease-in-out infinite;
+                        transition: 0.2s ease;
+                        border-radius: 40px;
+                        box-shadow: 3px 3px 4px rgb(0, 0, 0);
+                    }
+                    img:hover{
+                        animation: giroFlechaContacto 0.7s ease-in-out;
+                    }
+                    
+                    // animacion de giro de flecha de contacto
+                    @keyframes giroFlechaContacto {
+                        0% {
+                            transform: rotate(0deg) scale(1);
+                        }
+
+                        45% {
+                            transform: rotate(180deg) scale(0.85);
+                        }
+
+                        80% {
+                            transform: rotate(370deg) scale(1.12);
+                        }
+
+                        100% {
+                            transform: rotate(360deg) scale(1);
+                        }
+                    }
+                    
+                    // animacion rebote de flecha contacto
+                    @keyframes rebote {
+                        0%, 100% {
+                            transform: translateY(0);
+                        }
+
+                        50% {
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+            }
+        }
+        .cardContact:hover{
+            transform: translateY(-5px);
+            border: 1px solid $amarillo;
+        }
+    }
+}

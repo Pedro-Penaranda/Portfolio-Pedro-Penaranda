@@ -1,0 +1,130 @@
+.banner{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    min-height: 550px;
+    padding: 0px 65px;
+    overflow: hidden;
+    background: radial-gradient(circle at 85% 35%,rgba(37, 99, 235, 0.20), transparent 42%), linear-gradient(120deg,rgb(5, 10, 20),rgb(8, 16, 38));
+    color: $blanco;
+
+    .cont-banner{
+        position: relative;
+        z-index: 1;
+        min-width: 0;
+
+        h1{
+            font-family: $fuentePrincipal;
+            font-size: 16px;
+            font-weight: 600;
+            color: $azulBrillante;
+            letter-spacing: 2px;
+        }
+
+        .bannerTitulo{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3px;
+            margin: 20px 0;
+            font-family: $fuentePrincipal;
+            font-size: clamp(30px, 4vw, 58px);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+
+            .linea{
+                display: block;
+                width: fit-content;
+                white-space: nowrap;
+                clip-path: inset(0 100% 0 0);
+                animation-fill-mode: forwards;
+            }
+
+            .linea1{
+                animation: escribir 1.4s steps(15, end) 0.3s forwards;
+                z-index: 1;
+            }
+
+            .linea2{
+                color: $azulBrillante;
+                animation: escribir 1.2s steps(10, end) 3.1s forwards;
+            }
+
+            // animacion de banner escritura
+            @keyframes escribir {
+                from {
+                    clip-path: inset(0 100% 0 0);
+                }
+
+                to {
+                    clip-path: inset(0 0 0 0);
+                }
+            }
+        }
+
+        .bannerDescripcion{
+            font-family: $fuentePrincipal;
+        }
+
+        .bannerBotones{
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+
+            .btnBanner{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 13px 25px;
+                border-radius: 12px;
+                font-family: $fuentePrincipal;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: none;
+                transition:transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+            }
+
+            .btnProyecto{
+                color: $blanco;
+                background: $azulBrillanteBajo;
+                border: 1px solid $azulBrillanteBajo;
+            }
+            .btnProyecto:hover{
+                transform: translateY(-3px);
+                border: 2px solid $amarillo;
+            }
+
+            .btnContacto{
+                color: $blanco;
+                background: transparent;
+                border: 1px solid $azulBrillanteBajo;
+            }
+            .btnContacto:hover{
+                transform: translateY(-3px);
+                border: 2px solid $amarillo;
+            }
+        }
+    }
+
+    .imgBanner{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        align-self: end;
+        min-width: 0;
+
+        img{
+            display: block;
+            width: 500px;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
+            z-index: 0;
+        }
+    }
+}
